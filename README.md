@@ -1,4 +1,4 @@
-# pacmen
+# <a href="https://github.com/23h1/pacmen"> pacmen repo </a>
 A basic factory for creating pacmen on demand.
 
 Each pacman would bounce of all 4 walls.
