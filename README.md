@@ -5,4 +5,4 @@ Each pacman would bounce of all 4 walls.
 
 Start by loading the pacmanFactory.html on the browser and hit the `Add PacMan` button.
 
-<img src="pac_man_3d.png">
+<img src="./images/pac_man_3d.png">

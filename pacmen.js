@@ -1,11 +1,10 @@
-<html>
-<SCRIPT>
-    var pos = 0;
+
+    
     const pacArray = [
-        ['PacMan1.png', 'PacMan2.png'],
-        ['PacMan3.png', 'PacMan4.png']
+        ['./images/PacMan1.png', './images/PacMan2.png'],
+        ['./images/PacMan3.png', './images/PacMan4.png']
     ];
-    var direction = 0;
+    
     const pacMen = []; // This array holds all the pacmen
 
     function setToRandom(scale) {
@@ -23,8 +22,9 @@
         let game = document.getElementById('game');
         let newimg = document.createElement('img');
         newimg.style.position = 'absolute';
-        newimg.src = 'PacMan1.png';
+        newimg.src = './images/PacMan1.png';
         newimg.width = 100;
+
         //
         // set position here 
         //
@@ -61,25 +61,11 @@
         if (item.position.y + item.velocity.y + item.newimg.height > window.innerHeight || item.position.y + item.velocity.y < 0)
         {
             item.velocity.y = -item.velocity.y;
-            if (item.position.y + item.velocity.y + item.newimg.height > (window.innerHeight - 20) || item.position.y + item.velocity.y < 20)
-                item.newimg.width = 15;
+            //if (item.position.y + item.velocity.y + item.newimg.height > (window.innerHeight - 20) || item.position.y + item.velocity.y < 20)
+            //    item.newimg.width = 15;
         }
     }
 
     function makeOne() {
         pacMen.push(makePac()); // add a new PacMan
     }
-    // function remove() {
-    //     pacMen.pop(makePac()); // pop out a PacMan
-    // }
-</SCRIPT>
-
-<body>
-    <div id='game'>
-        <button onclick='makeOne()' width='200' height='30'>Add PacMan</button>
-        <button onclick='update()' width='200' height='30'>Start Game</button>
-
-    </div>
-</body>
-
-</html>
